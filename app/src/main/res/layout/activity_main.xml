@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <TextView
+        android:id="@+id/scorecard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text=""
+        android:gravity="center"
+        android:background="@drawable/green_outline"
+        android:hint="@string/start_stop"
+        android:textColorHint="#000"
+        app:layout_constraintBottom_toTopOf="@+id/score_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/first_block"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/block_division_horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/block_division_vertical"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/score_guideline"
+        app:layout_constraintVertical_bias="0.0"
+        android:onClick="colorDrawableTapped"
+        android:src="@drawable/orange_shape" />
+
+    <ImageView
+        android:id="@+id/second_block"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/block_division_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/block_division_vertical"
+        app:layout_constraintTop_toTopOf="@+id/score_guideline"
+        app:layout_constraintVertical_bias="0.0"
+        android:onClick="colorDrawableTapped"
+        android:src="@drawable/blue_shape" />
+
+    <ImageView
+        android:id="@+id/third_block"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/block_division_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/block_division_horizontal"
+        android:onClick="colorDrawableTapped"
+        android:src="@drawable/yellow_shape" />
+
+    <ImageView
+        android:id="@+id/fourth_block"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/block_division_vertical"
+        app:layout_constraintTop_toTopOf="@+id/block_division_horizontal"
+        android:onClick="colorDrawableTapped"
+        android:src="@drawable/green_shape" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/score_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/block_division_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/block_division_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
+</androidx.constraintlayout.widget.ConstraintLayout>
